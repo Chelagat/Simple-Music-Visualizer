@@ -18,6 +18,9 @@
     <script src="play-button.js" defer></script>
     <script src="gif-display.js" defer></script>
     <script src="music-screen.js" defer></script>
+    <script src="gif-display-preloaded.js" defer></script>
+    <script src="music-screen-preloaded.js" defer></script>
+
     <script src="app.js" defer></script>
     <script src="script.js" defer></script>
   </head>
@@ -35,11 +38,17 @@
           <div id="error" class="inactive">Not enough gifs for this theme. Please try another.</div>
 
           <input type="submit" value="Go" />
+
         </form>
       </fieldset>
     </div>
+    <div id="music" class = "inactive">
+      <div id = "load" class = 'top'> <p>Loading....<p></div>
+      <div id="foreground-gif"></div>
+      <div id= "background-gif"></div>
+    </div>
+    <div id = "play-option" class = "inactive" > <img src = 'images/pause.png' id = 'play'></div>
 
-    <!-- TODO(you): Add the HTML necessary to complete the assignment! -->
 
   </body>
 </html>
