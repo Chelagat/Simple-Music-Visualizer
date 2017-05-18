@@ -80,9 +80,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  size: 3em;
+  font-size: 2em;
+  color:#e2e2e2;
+  font-style: italic;
   width: 100%;
   height: calc(100vh - 70px);
+  
   position: absolute;
 }
 
