@@ -52,12 +52,16 @@ class MenuScreen {
 
   _onGiphyJsonReady(json){
     const giphys =  json['data'];
-    console.log(giphys);
-    this.giphy_urls = [];
-    for (let giphy in giphys){
-      this.giphy_urls.push(giphys[giphy].images.downsized.url);
-      //this.giphy_urls.push((giphys[giphy]['images']['original']['url']));
-    }
+    if (giphys.length == 0){
+       let errorElem = document.querySelector("#error");
+       errorElem.classList.remove('inactive');
+    }else{
+      console.log(giphys);
+      this.giphy_urls = [];
+      for (let giphy in giphys){
+        this.giphy_urls.push(giphys[giphy].images.downsized.url);
+        //this.giphy_urls.push((giphys[giphy]['images']['original']['url']));
+      }
     console.log(this.giphy_urls);
     this.hide();
     let song_option  =  this.songSelector.options[this.songSelector.selectedIndex].text;
@@ -65,6 +69,7 @@ class MenuScreen {
     let songUrl = this.getSongUrl(this.songs, song_option);
     console.log("songURL: ", songUrl);
     this.onSubmitCallback(song_option, songUrl, this.giphy_urls);
+    }
   }
 
   getSongUrl(songs, song_option){
