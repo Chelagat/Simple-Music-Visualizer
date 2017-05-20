@@ -52,7 +52,7 @@ class MenuScreen {
 
   _onGiphyJsonReady(json){
     const giphys =  json['data'];
-    if (giphys.length == 0){
+    if (giphys == null){
        let errorElem = document.querySelector("#error");
        errorElem.classList.remove('inactive');
     }else{
