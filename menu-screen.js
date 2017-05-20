@@ -4,7 +4,7 @@
 // See HW4 writeup for more hints and details.
 
 const JSON_PATH  = 'https://yayinternet.github.io/hw4-music/songs.json';
-const GIPHY_PATH = 'http://api.giphy.com/v1/gifs/search?q=';
+const GIPHY_PATH = 'https://api.giphy.com/v1/gifs/search?q=';
 const API_KEY = '&api_key=dc6zaTOxFJmzC';
 class MenuScreen {
   constructor(containerElement, onSubmitCallback) {
